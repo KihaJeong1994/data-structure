@@ -10,6 +10,8 @@ I usually refer to the link above to study about the data structures.
 
 Let's get started!
 
+---
+
 ## Heap
 
 > A Heap is a special Tree-based Data Structure in which the tree is complete binary tree.
@@ -38,3 +40,17 @@ Complete binary tree : a binary tree that all levels of the tree are **fully fil
 ### Heapify
 
 ***Heapify*** is the process to rearrange the elements to maintain the property of heap data structure
+
+---
+
+## Trie
+
+> Trie is a type of k-ary search tree used for storing and searching a specific key from a set. Using Trie, search complexities can be brought to optimal limit (key length). 
+
+Trie : a ***search tree*** to store and search keys.
+- all strings sharing ***common prefix*** should come from a ***common node***
+- Known as digital tree, or prefix tree. 
+- Used to store a large amount of strings. 
+- Easy for pattern matching
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20220828232752/Triedatastructure1.png)
