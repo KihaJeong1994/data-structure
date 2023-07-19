@@ -1,35 +1,49 @@
 package com.example.datastructure.trie
 
-class TrieNode {
-    val ALPHABET_SIZE = 26
-    var isEnd = false
-    val children = MutableList<TrieNode?>(ALPHABET_SIZE){ null }
-    fun insert(word:String) {
-        val node = children[charToIdx(word.first())] ?: TrieNode()
-        children[charToIdx(word.first())] = node
-        if (word.length > 1) {
-            node.insert(word.substring(1))
-        } else {
-            node.isEnd = true
+class Trie{
+    private val root = TrieNode()
+
+    fun insert(word: String){
+        var node = root
+        var idx:Int
+        for(c in word){
+            idx = charToIdx(c)
+            if(node.children[idx]==null) node.children[idx] = TrieNode()
+            node = node.children[idx]!!
         }
+        node.isEnd = true
     }
-    fun search(word:String):Boolean{
-        val trieNode = children[charToIdx(word.first())]
-        if(word.length==1) return trieNode !=null && trieNode.isEnd
-        return (trieNode !=null) && trieNode.search(word.substring(1))
+
+    fun search(word: String):Boolean{
+        var node = root
+        for(c in word){
+            var idx = charToIdx(c)
+            if(node.children[idx]==null){
+                return false
+            }
+            node = node.children[idx]!!
+        }
+        return node.isEnd
     }
 
     private fun charToIdx(char: Char):Int = char.compareTo('a')
+
+    class TrieNode {
+        val ALPHABET_SIZE = 26
+        var isEnd = false
+        val children = MutableList<TrieNode?>(ALPHABET_SIZE){ null }
+    }
 }
 
+
 fun main() {
-    val root = TrieNode()
-    root.insert("an")
-    root.insert("and")
-    println(root.search("an"))
-    println(root.search("and"))
-    println(root.search("andg"))
-    root.insert("baz")
-    println(root.search("baz"))
+    val trie = Trie()
+    trie.insert("an")
+    trie.insert("and")
+    println(trie.search("an"))
+    println(trie.search("and"))
+    println(trie.search("andg"))
+    trie.insert("baz")
+    println(trie.search("baz"))
 
 }
