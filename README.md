@@ -54,3 +54,17 @@ Trie : a ***search tree*** to store and search keys.
 - Easy for pattern matching
 
 ![](https://media.geeksforgeeks.org/wp-content/uploads/20220828232752/Triedatastructure1.png)
+
+---
+
+## B-Tree
+
+***B-Tree***, ***Balanced*** Tree, is a type of self-balancing tree that was designed to solve the limitation of Binary Search Tree.
+
+- can store a lot of keys in a single node -> "large key tree"
+- multiple keys -> large branches -> shallow height -> ***Less Dist I/O*** -> faster read/write
+- well suited for storage with slow and bulky data access
+- maintains balance by ensuring that each node has the minimum number of keys
+- searching, insertion, deletion : O(logN)
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20200506235136/output253.png)

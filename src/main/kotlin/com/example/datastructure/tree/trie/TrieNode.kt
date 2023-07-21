@@ -1,4 +1,4 @@
-package com.example.datastructure.trie
+package com.example.datastructure.tree.trie
 
 class Trie{
     private val root = TrieNode()
