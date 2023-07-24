@@ -86,3 +86,9 @@ https://www.cs.cornell.edu/courses/cs3110/2012sp/recitations/rec25-B-trees/rec25
 - All keys of a node are sorted in increasing order. The child between two keys **k1** and **k2** contains all keys in the range from **k1** and **k2**
 - B-Tree grows and shrinks from the root (unlike BST)
 - Insertion of a Node in B-Tree happens only at Leaf Node
+
+### Applications
+
+- used in large databases to access data stored on the disk
+- natural language processing, computer networks, and cryptography
+- CAD systems to organize and search geometric data
