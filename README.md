@@ -59,6 +59,10 @@ Trie : a ***search tree*** to store and search keys.
 
 ## B-Tree
 
+https://www.geeksforgeeks.org/introduction-of-b-tree-2/
+
+https://www.cs.cornell.edu/courses/cs3110/2012sp/recitations/rec25-B-trees/rec25.html
+
 ***B-Tree***, ***Balanced*** Tree, is a type of self-balancing tree that was designed to solve the limitation of Binary Search Tree.
 
 - can store a lot of keys in a single node -> "large key tree"
@@ -66,5 +70,19 @@ Trie : a ***search tree*** to store and search keys.
 - well suited for storage with slow and bulky data access
 - maintains balance by ensuring that each node has the minimum number of keys
 - searching, insertion, deletion : O(logN)
+- ***order*** : the maximum number of the children of each nonleaf node 
+- ***degree*** : the minimum number of children possible except for the root
+- nonleaf nodes contain only keys
 
 ![](https://media.geeksforgeeks.org/wp-content/uploads/20200506235136/output253.png)
+
+### Properties
+
+- degree : t
+- All leaves are at the same level. The actual elements of the collection are stored in the leaves.
+- Every node except root must contain at least t-1 keys (degree)
+- All nodes(including rrot) may contain at most 2t-1 keys (order)
+- number of children of a node = number of keys + 1
+- All keys of a node are sorted in increasing order. The child between two keys **k1** and **k2** contains all keys in the range from **k1** and **k2**
+- B-Tree grows and shrinks from the root (unlike BST)
+- Insertion of a Node in B-Tree happens only at Leaf Node
