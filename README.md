@@ -84,7 +84,7 @@ https://www.cs.cornell.edu/courses/cs3110/2012sp/recitations/rec25-B-trees/rec25
 - All nodes(including rrot) may contain at most 2t-1 keys (order)
 - number of children of a node = number of keys + 1
 - All keys of a node are sorted in increasing order. The child between two keys **k1** and **k2** contains all keys in the range from **k1** and **k2**
-- B-Tree grows and shrinks from the root (unlike BST)
+- B-Tree grows and shrinks ***from the root*** (unlike BST)
 - Insertion of a Node in B-Tree happens only at Leaf Node
 
 ### Applications
